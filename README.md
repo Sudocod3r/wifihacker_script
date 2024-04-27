@@ -1,9 +1,3 @@
- ____  __.____ _______    __________      _________ __________    _____   
-|    |/ _/_   |\      \  /  _____/  \    /  \   _  \\______   \  /     \  
-|      <  |   |/   |   \/   \  __\   \/\/   /  /_\  \|       _/ /  \ /  \ 
-|    |  \ |   /    |    \    \_\  \        /\  \_/   \    |   \/    Y    \
-|____|__ \|___\____|__  /\______  /\__/\  /  \_____  /____|_  /\____|__  /
-        \/            \/        \/      \/         \/       \/         \/ 
 # wifihacker_script
 This repository contains a Bash script to install Realtek Wi-Fi drivers, Wifite dependencies, and other tools for wireless network analysis. The script is designed to run on Kali Linux, but it may also work on other Debian-based distributions.
 
