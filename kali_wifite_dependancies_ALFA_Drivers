@@ -1,0 +1,62 @@
+#!/bin/bash
+# Update system and reboot
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade -y
+
+# Reboot to apply updates, especially if kernel upgrades are made
+sudo reboot now
+
+# Ensure system is fully updated before further installations
+sudo apt update
+
+# Install Realtek Wi-Fi drivers and related tools
+sudo apt install -y realtek-rtl88xxau-dkms dkms build-essential
+
+# Clone and compile the Aircrack-ng repository for specific Wi-Fi drivers
+git clone https://github.com/aircrack-ng/rtl8812au
+cd rtl8812au/
+make && sudo make install
+
+# Verify the installation of drivers and wireless devices
+lsusb
+iwconfig
+
+# Install hcxdumptool for capturing wireless data
+sudo apt install -y hcxdumptool
+
+# Install hcxpcaptool for converting packet captures to .cap format
+sudo apt install -y hcxtools
+
+# Install Pyrit and its dependencies for wireless network analysis
+sudo apt-get install -y libpcap-dev libssl-dev zlib1g-dev python3-dev
+
+# Install Pyrit from source
+git clone https://github.com/JPaulMora/Pyrit.git
+cd Pyrit
+sudo python3 setup.py clean
+sudo python3 setup.py build
+sudo python3 setup.py install
+
+# Verify installation and report any errors
+if ! command -v pyrit &> /dev/null; then
+  echo "Error: Pyrit installation failed."
+else
+  echo "Pyrit installed successfully."
+fi
+
+# Install PostgreSQL for database support
+sudo apt-get install -y postgresql
+
+# Install Python packages
+sudo pip install psycopg2 scapy
+
+# Additional check for successful Scapy installation
+if ! command -v scapy &> /dev/null; then
+  echo "Error: Scapy installation failed."
+else
+  echo "Scapy installed successfully."
+fi
+
+# Final system update and reboot to ensure stability
+sudo apt update && sudo apt upgrade -y
+sudo reboot now
