@@ -18,7 +18,7 @@ This repository contains a Bash script to install Realtek Wi-Fi drivers, Wifite 
      ```bash
      git clone https://github.com/Sudocod3r/wifihacker_script.git
      ```
-   - Navigate to the cloned repository directory:
+   - Navigate to the cloned repository directory: 
      ```bash
      cd /wifihacker_script
      ```
