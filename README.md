@@ -1,3 +1,9 @@
+ ____  __.____ _______    __________      _________ __________    _____   
+|    |/ _/_   |\      \  /  _____/  \    /  \   _  \\______   \  /     \  
+|      <  |   |/   |   \/   \  __\   \/\/   /  /_\  \|       _/ /  \ /  \ 
+|    |  \ |   /    |    \    \_\  \        /\  \_/   \    |   \/    Y    \
+|____|__ \|___\____|__  /\______  /\__/\  /  \_____  /____|_  /\____|__  /
+        \/            \/        \/      \/         \/       \/         \/ 
 # wifihacker_script
 This repository contains a Bash script to install Realtek Wi-Fi drivers, Wifite dependencies, and other tools for wireless network analysis. The script is designed to run on Kali Linux, but it may also work on other Debian-based distributions.
 
@@ -53,10 +59,9 @@ This repository contains a Bash script to install Realtek Wi-Fi drivers, Wifite 
   - If `hcxdumptool` or `hcxpcaptool` installation fails, ensure their Git repositories are accessible.
 - **Rebooting**:
   - If the system reboots, you must re-run the script to complete all steps.
-  - If the script doesn't continue after a reboot, ensure you're in the correct directory and try running it again.
-
+  - If the script doesn't continue after a reboot, remove lines 1-11 from kali_wifite_dependancies_ALFA_Drivers, and ensure you're in the correct directory and try running it again.
+  - Run one command at a time or update, upgrade, and reboot if script fails
 ## Contributing
-If you encounter issues or have suggestions for improving the script, feel free to open an issue or submit a pull request in this repository.
+If you encounter issues or have suggestions for improving the script, feel free to open an issue or submit a pull request in this repository :) 
 
-## License
-Specify the license for your repository. For example, you might use the MIT license, allowing others to use and modify your script with attribution.
+
